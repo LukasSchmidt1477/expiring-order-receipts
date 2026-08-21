@@ -11,7 +11,7 @@ The focused input is a fulfilled order whose receipt object is present. The expe
 
 ## Run the request path
 
-Infrai gives you one api and one key for the presigned storage call. The receipt bucket and object key stay private on your side.
+Infrai gives you one API key and presigned storage behind it, so the receipt bucket and object key stay private to your service.
 
 ```bash
 export INFRAI_API_KEY="your-key"
@@ -40,7 +40,7 @@ Expected update:
 {"order_id":"ord-1042","status":"fulfilled","receipt_download_url":"https://...","expires_seconds":300}
 ```
 
-The setup command makes the bucket before object ops. Receipt generation or upload is your fulfillment pipeline's job; this repo starts at the stored object key.
+The setup command creates the bucket before object operations. Receipt generation or upload belongs to the fulfillment pipeline; this repository starts at its stored object key.
 
 ## Decision record
 
